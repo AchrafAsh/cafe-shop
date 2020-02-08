@@ -3,17 +3,18 @@ import Product from './Product'
 import Title from '../globals/Title'
 import { StaticQuery, graphql } from 'gatsby'
 
-const getProducts = graphql`{
+const getProducts = graphql`
+  {
     products:allContentfulCoffeeProduct{
       edges{
         node{
           id
           title
-            price
+          price
           image{
-            fluid(maxHeight:426){
+            fluid(maxHeight: 768){
+              ...GatsbyContentfulFluid
               src
-              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }
