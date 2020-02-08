@@ -19,7 +19,7 @@ export const query = graphql`
     img:file(relativePath:{eq:"about-background.jpeg"}){
       childImageSharp{
         fluid{
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
