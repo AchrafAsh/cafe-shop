@@ -58,3 +58,7 @@ h1,h2,h3,h4,h5,h6{
 .menu,.contact{
     background: var(--mainGray);
 }
+
+.product-img{
+    max-height:200px;
+}
